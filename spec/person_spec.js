@@ -1,7 +1,7 @@
 /*  spec/person_spec.js
 */
 
-describe ("Person", function()) {
+describe("Person", function() {
   var person;
 
   beforeEach(function() {

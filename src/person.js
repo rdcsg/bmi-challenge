@@ -7,7 +7,8 @@ function Person(attr) {
   this.height = attr.height;
 };
 
+
 Person.prototype.calculate_bmi = function() {
-  this.bmiValue = 24.83
-  this.bmiMessage = "Normal";
-}
+  calculator = new BMICalculator();
+  calculator.metric_bmi(this);
+};

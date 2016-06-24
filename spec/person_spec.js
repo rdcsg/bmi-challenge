@@ -21,13 +21,13 @@ describe("Person", function() {
 
   it("should calculate BMI value", function() {
     person.calculate_bmi();
-    expect(person.bmiValue).toEqual(24.83)
+    expect(person.bmiValue).toEqual(24.83);
   });
 
 
   it("should have a BMI message", function() {
-  person.calculate_bmi();
-  expect(person.bmiMessage).toEqual("Normal")
+    person.calculate_bmi();
+    expect(person.bmiMessage).toEqual("Normal");
   });
 
 

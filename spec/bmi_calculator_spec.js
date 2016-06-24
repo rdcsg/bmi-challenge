@@ -1,4 +1,4 @@
-/*    spec/bmi_calculator_spec.js
+/*    ./spec/bmi_calculator_spec.js
 */
 
 

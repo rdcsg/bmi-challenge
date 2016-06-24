@@ -1,4 +1,4 @@
-/* src/person.js
+/*   ./src/person.js
 */
 
 

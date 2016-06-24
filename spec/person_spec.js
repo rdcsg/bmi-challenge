@@ -1,4 +1,4 @@
-/*  spec/person_spec.js
+/*  ./spec/person_spec.js
 */
 
 describe("Person", function() {

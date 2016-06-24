@@ -15,6 +15,7 @@ beforeEach(function() {
 
 it("calculates BMI for a person using the metric method", function () {
   calculator.metric_bmi(person);
+  expect(person.bmiValue).toEqual(24.83);
 })
 
 

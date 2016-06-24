@@ -7,5 +7,17 @@ describe("BMICalculator", function() {
   var person;
 
 
+beforeEach(function() {
+  person = new Person({weight: 85, height: 185});
+  calculator = new BMICalculator();
+});
 
-}
+
+it("calculates BMI for a person using the metric method", function () {
+  calculator.metric_bmi(person);
+})
+
+
+
+
+});

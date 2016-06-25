@@ -7,8 +7,8 @@ describe("BMICalculator", function() {
     person = new Person({weight: 187, height: 6});
     calculator = new BMICalculator();
   });
-  /*it("calculates BMI for a person using the metric method", function () {
+  it("calculates BMI for a person using the metric method", function () {
     calculator.metric_bmi(person);
-    expect(person.bmiValue).toEqual(24.84);
-  });*/
+    expect(person.bmiValue).toEqual(51944.44);
+  });
 });

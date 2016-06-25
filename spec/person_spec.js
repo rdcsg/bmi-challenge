@@ -19,16 +19,16 @@ describe("Person", function() {
   });
 
 
-  /*it("should calculate BMI value", function() {
+  it("should calculate BMI value", function() {
     person.calculate_bmi();
-    expect(person.bmiValue).toEqual(24.84);
+    expect(person.bmiValue).toEqual(51944.44);
   });
 
 
   it("should have a BMI message", function() {
     person.calculate_bmi();
-    expect(person.bmiMessage).toEqual("Normal");
-  });*/
+    expect(person.bmiMessage).toEqual("Obese");
+  });
 
 
   /* imperial specs below

@@ -11,7 +11,7 @@ BMICalculator.prototype.metric_bmi = function(obj) {
     setBMIMessage(obj);
   }
 };
-/*function setBMIMessage (obj, value) {
+function setBMIMessage (obj, value) {
   if (obj.bmiValue < 18.5) {
     obj.bmiMessage = "Underweight";
   }
@@ -24,7 +24,7 @@ BMICalculator.prototype.metric_bmi = function(obj) {
   if (obj.bmiValue >= 30) {
     obj.bmiMessage = "Obese";
   }
-}*/
+}
 
 /*function setBMIMessage (obj, value) {
   switch (obj.value) {

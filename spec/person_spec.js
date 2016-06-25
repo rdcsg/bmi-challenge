@@ -9,17 +9,17 @@ describe("Person", function() {
   });
 
 
-  /*it("should have weight of 85", function() {
-    expect(person.weight).toEqual(85);
+  it("should have weight of 187", function() {
+    expect(person.weight).toEqual(187);
   });
 
 
-  it("should have height of 185", function() {
-    expect(person.height).toEqual(185);
+  it("should have height of 6", function() {
+    expect(person.height).toEqual(6);
   });
 
 
-  it("should calculate BMI value", function() {
+  /*it("should calculate BMI value", function() {
     person.calculate_bmi();
     expect(person.bmiValue).toEqual(24.84);
   });

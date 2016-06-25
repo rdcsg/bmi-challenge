@@ -6,4 +6,12 @@
 1 meter = 3.2808399 feet (3 feet 3⅜ inches)
 1 inch = 2,54 cm
 
-185 cm = 72,8346 inches = 6,0695
+185 cm = 72,8346 inches = 6,0695 foot
+85 kg = 187,3929227 lb
+
+72 inches = 182,88 m = 6 foot
+187 lb = 84,8226 kg
+
+BMI in kg = 84,8226 / (182,88 * 182,88) = 84,8226 / 33445,0944 = 25,36 = bmiValue
+
+BMI in lb with factor 703 for weight = 187*703 / ( 72 * 72 ) = 72 / 5184 = 25,358

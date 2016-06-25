@@ -5,11 +5,11 @@ describe("Person", function() {
   var person;
 
   beforeEach(function() {
-    person = new Person({ weight: 85, height: 185 });
+    person = new Person({ weight: 187, height: 6 });
   });
 
 
-  it("should have weight of 85", function() {
+  /*it("should have weight of 85", function() {
     expect(person.weight).toEqual(85);
   });
 
@@ -28,7 +28,7 @@ describe("Person", function() {
   it("should have a BMI message", function() {
     person.calculate_bmi();
     expect(person.bmiMessage).toEqual("Normal");
-  });
+  });*/
 
 
   /* imperial specs below

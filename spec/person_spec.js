@@ -31,9 +31,22 @@ describe("Person", function() {
   });
 
 
+  /* imperial specs below
+  it("should have a toggle value set to true", fucntion() {
+
+  });*/
+
+
 
 /*  the following are stories that describe what happens when a user wants
  *  to calculate their BMI with imperial values.
+ *
+ *  before adding the specs below, make sure that the tests above pass with
+ *  the new values we will use for the imperial calculation.
+ *  use {weight: 187, height: 6}
+ *  make all the tests pass before adding more specs.
+ *  with the current calc for metric BMI it should give the output:
+ *  "Your BMI is 51944.44 and you are Obese"
  *
  *  1. index.html
  *  in the gui a user will have the option to use the preselected metric method
@@ -62,8 +75,10 @@ describe("Person", function() {
  *
  *  5. bmi_calculator.js
  *  the same calculation method will be used for both metric and imperial
- *  calculations and therefore the imperial values will be accepted and used.
- *  (remember they are in pounds and inches)
+ *  calculations and therefore the imperial values will be accepted and used
+ *  without exception and fuss, but make sure that the toggle switch value is
+ *  passed to the calculation, check if it's there and what it is.
+ *  remember that the user values are in whole pounds and inches.
  *
  *
  *  6. bmi_calculator.js

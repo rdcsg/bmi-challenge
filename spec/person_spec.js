@@ -35,42 +35,44 @@ describe("Person", function() {
 /*  the following are stories that describe what happens when a user wants
  *  to calculate their BMI with imperial values.
  *
- *  1.
+ *  1. index.html
  *  in the gui a user will have the option to use the preselected metric method
  *  or to toggle a switch in order to use the imperial method instead
  *
  *
- *  2.
+ *  2. index.html
  *  after choosing the imperial method a user will use the same input fields
  *  as for the metric calculation to enter their weight and height.
  *  the height value will be formatted ' '5"4' ' to describe foot and inches
+ *  use {weight: 187, height: 6}
  *
  *
- *  3.
+ *  3. person.js
  *  before the calculation method is used, the toggle switch will be a signal
  *  that the special formatting of the height value needs to be detected and
  *  split into two values (use regexp)
  *
  *
- *  4.
+ *  4. person.js
  *  then the split height value will be transformed to inches (12 inches in a foot),
  *  so that the values sent to the BMI calculation are in only pounds and inches
+ *  use {weight: 187, height: 72}
  *
  *
- *  5.
+ *  5. bmi_calculator.js
  *  the same calculation method will be used for both metric and imperial
  *  calculations and therefore the imperial values will be accepted and used.
  *  (remember they are in pounds and inches)
  *
  *
- *  6.
+ *  6. bmi_calculator.js
  *  if the switch is toggled to imperial, the imperial calculation method will
  *  assign a factor of 703 to be multiplied with the weight in pounds during the
  *  actual BMI calculation. Example: bmiValue = weight * 703 / height^2
  *  reference: http://www.calcbmi.com/
  *
  *
- *  7.
+ *  7. index.html
  *  when the switch is toggled the placeholders texts in the gui will change
  *  to reflect the change to imperial by instructing how to enter the height
  *  correctly in foot and inches

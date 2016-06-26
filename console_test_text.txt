@@ -1,0 +1,20 @@
+var height = 6;
+var weight = 187;
+var toggle = false;
+
+if (weight > 0 && height > 0 ) {
+  var calc_height = 0;
+  var toggle_factor = 0;
+  var height_divisor = 0;
+  if ( toggle === true ) {
+    calc_height = height * 12;
+    toggle_factor = 703;
+    height_divisor = 1;
+  }
+  if ( toggle === false ) {
+    calc_height = height;
+    toggle_factor = 1;
+    height_divisor = 100;
+  }
+  finalBmi = weight * toggle_factor / Math.pow((calc_height/height_divisor), 2);
+}

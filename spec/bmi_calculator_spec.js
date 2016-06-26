@@ -16,6 +16,12 @@ describe("BMICalculator", function() {
   });
 
 
+  it("transforms foot to inches when imperial is chosen", function() {
+    calculator.find_bmi_of(person);
+    expect(person.calc_height).toEqual(72);
+  });
+
+
   it("calculates BMI for a person using the metric method", function () {
     calculator.find_bmi_of(person);
     expect(person.bmiValue).toEqual(51944.44);

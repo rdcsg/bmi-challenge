@@ -39,14 +39,13 @@ describe("BMICalculator", function() {
 
   // metric bmi only test below
   it("calculates BMI for a person using the metric method", function () {
-    person.toggle = false;
+    person = new Person({ weight: 85, height: 185, toggle: false });
     calculator.find_bmi_of(person);
-    expect(person.bmiValue).toEqual(51944.44);
+    expect(person.bmiValue).toEqual(24.84);
   });
 
 
   it("calculates BMI using the imperial method when imperial is chosen", function() {
-    person.toggle = true;
     calculator.find_bmi_of(person);
     expect(person.bmiValue).toEqual(25.36);
   });

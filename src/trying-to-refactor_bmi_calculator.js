@@ -11,6 +11,19 @@ BMICalculator.prototype.find_bmi_of = function(obj) {
   var weight = person.weight;
   var toggle = person.toggle;
 
+  var finalBmi = calculateBMI(weight, height, toggle);
+  obj.bmiValue = parseFloat(finalBmi.toFixed(2));
+  setBMIMessage(obj);
+};
+
+
+function calculateBMI (weight, height, toggle) {
+  determineCalculationMethod(weight, height, toggle);
+  bmi = weight * toggle_factor / Math.pow((calc_height/height_divisor), 2);
+}
+
+
+function determineCalculationMethod (weight, height, toggle) {
   if (weight > 0 && height > 0 ) {
     var calc_height = 0;
     var toggle_factor = 0;
@@ -26,11 +39,8 @@ BMICalculator.prototype.find_bmi_of = function(obj) {
       toggle_factor = 1;
       height_divisor = 100;
     }
-    var finalBmi = weight * toggle_factor / Math.pow((calc_height/height_divisor), 2);
-    obj.bmiValue = parseFloat(finalBmi.toFixed(2));
-    setBMIMessage(obj);
   }
-};
+}
 
 
 function setBMIMessage (obj, value) {

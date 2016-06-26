@@ -26,16 +26,16 @@ describe("Person", function() {
 
   // two metric BMI calc specs below
   it("should calculate BMI value", function() {
-    person.toggle = false;
+    person = new Person({ weight: 85, height: 185, toggle: false });
     person.calculate_bmi();
-    expect(person.bmiValue).toEqual(51944.44);
+    expect(person.bmiValue).toEqual(24.84);
   });
 
 
   it("should have a BMI message", function() {
-    person.toggle = false;
+    person = new Person({ weight: 85, height: 185, toggle: false });
     person.calculate_bmi();
-    expect(person.bmiMessage).toEqual("Obese");
+    expect(person.bmiMessage).toEqual("Normal");
   });
 
 

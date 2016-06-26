@@ -14,8 +14,9 @@ describe("BMICalculator", function() {
     calculator.find_bmi_of(person);
     expect(person.toggle).toEqual(true);
   });
+  
 
-
+  // tests for in depth testing below, probably necessary when refactoring
   /*it("transforms foot to inches when imperial is chosen", function() {
     person.toggle = true;
     calculator.find_bmi_of(person);

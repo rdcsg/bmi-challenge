@@ -11,11 +11,13 @@ BMICalculator.prototype.find_bmi_of = function(obj) {
   var weight = obj.weight;
   var toggle = obj.toggle;
   var toggle_factor = 1;
+  var height_divisor = 100;
   if (weight > 0 && height > 0 ) {
     /*if ( toggle === true ) {
       toggle_factor = 703;
+      height_divisor = 1;
     }*/
-    var finalBmi = weight * toggle_factor / Math.pow((height/100), 2);
+    var finalBmi = weight * toggle_factor / Math.pow((height/height_divisor), 2);
     obj.bmiValue = parseFloat(finalBmi.toFixed(2));
     setBMIMessage(obj);
   }

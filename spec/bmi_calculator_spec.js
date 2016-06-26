@@ -15,10 +15,10 @@ describe("BMICalculator", function() {
     calculator.find_bmi_of(person);
     expect(person.bmiValue).toEqual(51944.44);
   });
-  it("calculates BMI for a person using the imperial method", function() {
+  /*it("calculates BMI for a person using the imperial method", function() {
     calculator.find_bmi_of(person);
     expect(person.bmiValue).toEqual(25.36);
-  });
+  });*/
 });
 
 

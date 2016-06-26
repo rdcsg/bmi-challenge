@@ -37,10 +37,12 @@ describe("BMICalculator", function() {
   });*/
 
 
-  /*it("calculates BMI for a person using the metric method", function () {
+  // metric bmi only test below
+  it("calculates BMI for a person using the metric method", function () {
+    person.toggle = false;
     calculator.find_bmi_of(person);
     expect(person.bmiValue).toEqual(51944.44);
-  });*/
+  });
 
 
   it("calculates BMI using the imperial method when imperial is chosen", function() {

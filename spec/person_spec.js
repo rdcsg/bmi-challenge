@@ -25,16 +25,18 @@ describe("Person", function() {
 
 
   // two metric BMI calc specs below
-  /*it("should calculate BMI value", function() {
+  it("should calculate BMI value", function() {
+    person.toggle = false;
     person.calculate_bmi();
     expect(person.bmiValue).toEqual(51944.44);
   });
 
 
   it("should have a BMI message", function() {
+    person.toggle = false;
     person.calculate_bmi();
     expect(person.bmiMessage).toEqual("Obese");
-  });*/
+  });
 
 
   // two imperial BMI calc specs below

@@ -3,7 +3,7 @@
 function Person(attr) {
   this.weight = attr.weight;
   this.height = attr.height;
-  this.imperial_toggle = attr.toggle;
+  this.toggle = attr.toggle;
 }
 Person.prototype.calculate_bmi = function() {
   //this.bmiValue = 51944.44;

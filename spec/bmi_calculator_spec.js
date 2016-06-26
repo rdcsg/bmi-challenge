@@ -1,19 +1,27 @@
 /*    ./spec/bmi_calculator_spec.js
 */
 describe("BMICalculator", function() {
-  //var calculator;
-  //var person;
+  //var calculator;   //this value is declared in the beforeEach
+  //var person;       //this value is declared in the beforeEach
+  var bmi_calculator
   beforeEach(function() {
     person = new Person({weight: 187, height: 6, toggle: true});
     calculator = new BMICalculator();
   });
-  it("checks for the imperial toggle switch and gets its value", function() {
-    expect(person.imperial_toggle).toEqual(true);
+
+
+  it("checks for the imperial toggle switch that the calculator sees and gets its value", function() {
+    calculator.find_bmi_of(person);
+    expect(person.toggle).toEqual(true);
   });
+
+
   it("calculates BMI for a person using the metric method", function () {
     calculator.find_bmi_of(person);
     expect(person.bmiValue).toEqual(51944.44);
   });
+
+  
   /*it("calculates BMI for a person using the imperial method", function() {
     calculator.find_bmi_of(person);
     expect(person.bmiValue).toEqual(25.36);

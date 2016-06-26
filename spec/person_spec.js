@@ -2,10 +2,15 @@
 */
 
 describe("Person", function() {
-  var person;
+  //var person;   // this var is declared in the beforeEach below
 
   beforeEach(function() {
-    person = new Person({ weight: 187, height: 6 });
+    person = new Person({ weight: 187, height: 6, toggle: true });
+  });
+
+
+  it("should have the imperial toggle switch value of true", function() {
+    expect(person.toggle).toEqual(true);
   });
 
 

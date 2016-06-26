@@ -24,6 +24,12 @@ describe("Person", function() {
   });
 
 
+  it("should transform a string like 6\"4\' to amount of inches", function() {
+    person.height = "6\"4\'";
+    expect(person.transformHeightStringToInches(person.height)).toEqual(76);
+  });
+
+
   // two metric BMI calc specs below
   it("should calculate a metric BMI value", function() {
     person = new Person({ weight: 85, height: 185, toggle: false });

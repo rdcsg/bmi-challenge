@@ -5,7 +5,7 @@ function BMICalculator() {
 BMICalculator.prototype.find_bmi_of = function(obj) {
   var height = obj.height;
   var weight = obj.weight;
-  var imperial_toggle = ojb.toggle;
+  var imperial_toggle = obj.toggle;
   if (weight > 0 && height > 0 ) {
     var finalBmi = weight / Math.pow((height/100), 2);
     obj.bmiValue = parseFloat(finalBmi.toFixed(2));

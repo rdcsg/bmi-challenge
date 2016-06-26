@@ -24,6 +24,7 @@ describe("Person", function() {
   });
 
 
+  // two metric BMI calc specs below
   it("should calculate BMI value", function() {
     person.calculate_bmi();
     expect(person.bmiValue).toEqual(51944.44);
@@ -36,9 +37,16 @@ describe("Person", function() {
   });
 
 
-  /* imperial specs below
-  it("should have a toggle value set to true", fucntion() {
+  // two imperial BMI calc specs below
+  /*it("should calculate BMI value", function() {
+    person.calculate_bmi();
+    expect(person.bmiValue).toEqual(25.36);
+  });
 
+
+  it("should have a BMI message", function() {
+    person.calculate_bmi();
+    expect(person.bmiMessage).toEqual("Overweight");
   });*/
 
 

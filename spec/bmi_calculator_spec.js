@@ -3,7 +3,7 @@
 describe("BMICalculator", function() {
   //var calculator;   //this value is declared in the beforeEach
   //var person;       //this value is declared in the beforeEach
-  var bmi_calculator
+
   beforeEach(function() {
     person = new Person({weight: 187, height: 6, toggle: true});
     calculator = new BMICalculator();
@@ -21,11 +21,13 @@ describe("BMICalculator", function() {
     expect(person.bmiValue).toEqual(51944.44);
   });
 
-  
+
   /*it("calculates BMI for a person using the imperial method", function() {
     calculator.find_bmi_of(person);
     expect(person.bmiValue).toEqual(25.36);
   });*/
+
+
 });
 
 

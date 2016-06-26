@@ -25,7 +25,7 @@ describe("Person", function() {
 
 
   // two metric BMI calc specs below
-  it("should calculate BMI value", function() {
+  /*it("should calculate BMI value", function() {
     person.calculate_bmi();
     expect(person.bmiValue).toEqual(51944.44);
   });
@@ -34,11 +34,11 @@ describe("Person", function() {
   it("should have a BMI message", function() {
     person.calculate_bmi();
     expect(person.bmiMessage).toEqual("Obese");
-  });
+  });*/
 
 
   // two imperial BMI calc specs below
-  /*it("should calculate BMI value", function() {
+  it("should calculate BMI value", function() {
     person.calculate_bmi();
     expect(person.bmiValue).toEqual(25.36);
   });
@@ -47,7 +47,7 @@ describe("Person", function() {
   it("should have a BMI message", function() {
     person.calculate_bmi();
     expect(person.bmiMessage).toEqual("Overweight");
-  });*/
+  });
 
 
 

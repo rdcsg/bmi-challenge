@@ -16,10 +16,25 @@ describe("BMICalculator", function() {
   });
 
 
-  it("transforms foot to inches when imperial is chosen", function() {
+  /*it("transforms foot to inches when imperial is chosen", function() {
+    person.toggle = true;
     calculator.find_bmi_of(person);
     expect(person.calc_height).toEqual(72);
   });
+
+
+  it("transforms assigns a weight factor of 703 when imperial is chosen", function() {
+    person.toggle = true;
+    calculator.find_bmi_of(person);
+    expect(person.toggle_factor).toEqual(703);
+  });
+
+
+  it("transforms assigns a height divisor of 1 when imperial is chosen", function() {
+    person.toggle = true;
+    calculator.find_bmi_of(person);
+    expect(person.height_divisor).toEqual(703);
+  });*/
 
 
   it("calculates BMI for a person using the metric method", function () {
@@ -28,10 +43,11 @@ describe("BMICalculator", function() {
   });
 
 
-  /*it("calculates BMI for a person using the imperial method", function() {
+  it("calculates BMI using the imperial method when imperial is chosen", function() {
+    person.toggle = true;
     calculator.find_bmi_of(person);
     expect(person.bmiValue).toEqual(25.36);
-  });*/
+  });
 
 
 });

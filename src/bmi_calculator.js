@@ -15,7 +15,7 @@ BMICalculator.prototype.find_bmi_of = function(obj) {
     var calc_height = 0;
     var toggle_factor = 0;
     var height_divisor = 0;
-
+    
     if ( toggle === true ) {
       calc_height = height * 12;
       toggle_factor = 703;

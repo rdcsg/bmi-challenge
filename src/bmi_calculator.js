@@ -29,12 +29,12 @@ BMICalculator.prototype.find_bmi_of = function(obj) {
     }
     var finalBmi = weight * toggle_factor / Math.pow((calc_height/height_divisor), 2);
     obj.bmiValue = parseFloat(finalBmi.toFixed(2));
-    //setBMIMessage(obj);
+    setBMIMessage(obj);
   }
 };
 
 
-/*function setBMIMessage (obj, value) {
+function setBMIMessage (obj, value) {
   if (obj.bmiValue < 18.5) {
     obj.bmiMessage = "Underweight";
   }
@@ -47,10 +47,10 @@ BMICalculator.prototype.find_bmi_of = function(obj) {
   if (obj.bmiValue >= 30) {
     obj.bmiMessage = "Obese";
   }
-}*/
+}
 
 
-function setBMIMessage (obj, value) {
+/*function setBMIMessage (obj, value) {
   switch (obj.value) {
     case (obj.value < 18.5):
       obj.bmiMessage = "Underweight";
@@ -67,4 +67,4 @@ function setBMIMessage (obj, value) {
     default:
       obj.bmiMessage = "Invalid BMI value.";
   }
-}
+}*/

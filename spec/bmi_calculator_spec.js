@@ -10,10 +10,24 @@ describe("BMICalculator", function() {
   });
 
 
-  /*it("checks for the imperial toggle switch that the calculator sees and gets its value", function() {
+  it("checks for the imperial toggle switch that the calculator sees and gets its value", function() {
     calculator.find_bmi_of(person);
     expect(person.toggle).toEqual(true);
-  });*/
+  });
+
+
+  it("calculates BMI using the imperial method when imperial is chosen", function() {
+    calculator.find_bmi_of(person);
+    expect(person.bmiValue).toEqual(25.36);
+  });
+
+
+  // metric bmi only test below
+  it("calculates BMI for a person using the metric method", function () {
+    person = new Person({ weight: 85, height: 185, toggle: false });
+    calculator.find_bmi_of(person);
+    expect(person.bmiValue).toEqual(24.84);
+  });
 
 
   // tests for in depth testing below, probably necessary when refactoring
@@ -35,20 +49,6 @@ describe("BMICalculator", function() {
     person.toggle = true;
     calculator.find_bmi_of(person);
     expect(person.height_divisor).toEqual(703);
-  });*/
-
-
-  // metric bmi only test below
-  /*it("calculates BMI for a person using the metric method", function () {
-    person = new Person({ weight: 85, height: 185, toggle: false });
-    calculator.find_bmi_of(person);
-    expect(person.bmiValue).toEqual(24.84);
-  });
-
-
-  it("calculates BMI using the imperial method when imperial is chosen", function() {
-    calculator.find_bmi_of(person);
-    expect(person.bmiValue).toEqual(25.36);
   });*/
 
 

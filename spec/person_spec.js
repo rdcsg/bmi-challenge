@@ -1,12 +1,12 @@
 /*  ./spec/person_spec.js
 */
 
+
 describe("Person", function() {
-  //var person;   // this var is declared in the beforeEach below
+  //var person;   // this var is already declared in the beforeEach below
 
   beforeEach(function() {
-    person = new Person({ weight: 85, height: 185, toggle: false });
-    //person = new Person({ weight: 187, height: 6, toggle: true });
+    person = new Person({ weight: 187, height: 6, toggle: true });
   });
 
 
@@ -34,30 +34,30 @@ describe("Person", function() {
 
   // two metric BMI calc specs below
   it("should calculate a metric BMI value", function() {
-    //person = new Person({ weight: 85, height: 185, toggle: false });
+    person = new Person({ weight: 85, height: 185, toggle: false });
     person.calculate_bmi();
     expect(person.bmiValue).toEqual(24.84);
   });
 
 
-  /*it("should have a metric BMI message", function() {
-    //person = new Person({ weight: 85, height: 185, toggle: false });
+  it("should have a metric BMI message", function() {
+    person = new Person({ weight: 85, height: 185, toggle: false });
     person.calculate_bmi();
     expect(person.bmiMessage).toEqual("Normal");
-  });*/
+  });
 
 
   // two imperial BMI calc specs below
-  /*it("should calculate an imperial BMI value", function() {
+  it("should calculate an imperial BMI value", function() {
     person.calculate_bmi();
     expect(person.bmiValue).toEqual(25.36);
-  });*/
+  });
 
 
-  /*it("should have an imperial BMI message", function() {
+  it("should have an imperial BMI message", function() {
     person.calculate_bmi();
     expect(person.bmiMessage).toEqual("Overweight");
-  });*/
+  });
 
 
 

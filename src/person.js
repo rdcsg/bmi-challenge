@@ -1,4 +1,5 @@
 /*   ./src/person.js
+      Works together with ./src/bmi_calculator.js
 */
 
 

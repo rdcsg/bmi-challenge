@@ -1,4 +1,5 @@
 /*   ./src/bmi_calculator.js
+     Is called by ./src/person.js
 */
 
 
@@ -33,7 +34,7 @@ BMICalculator.prototype.find_bmi_of = function(obj) {
 };
 
 
-function setBMIMessage (obj, value) {
+/*function setBMIMessage (obj, value) {
   if (obj.bmiValue < 18.5) {
     obj.bmiMessage = "Underweight";
   }
@@ -46,24 +47,25 @@ function setBMIMessage (obj, value) {
   if (obj.bmiValue >= 30) {
     obj.bmiMessage = "Obese";
   }
-}
+}*/
 
 
 /*function setBMIMessage (obj, value) {
   switch (obj.value) {
-    case (obj.value <= 18.5):
+    case (obj.value < 18.5):
       obj.bmiMessage = "Underweight";
       break;
-    case (obj.value > 18.5 && obj.value <= 25):
+    case (obj.value >= 18.5 && obj.value < 25):
       obj.bmiMessage = "Normal";
       break;
-    case (obj.value > 25 && obj.value <= 30):
+    case (obj.value >= 25 && obj.value < 30):
       obj.bmiMessage = "Overweight";
       break;
-    case (obj.value > 30):
+    case (obj.value >= 30):
       obj.bmiMessage = "Obese";
       break;
     default:
       obj.bmiMessage = "Invalid BMI value.";
-  }
-}*/
+  }*/
+
+}

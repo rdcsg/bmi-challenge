@@ -13,6 +13,7 @@
         $("#calculate").click(function () {
           var w = parseFloat($("#weight").val());
           var h = parseFloat($("#height").val());
+          var t = new String();
           var person = new Person({weight: w, height: h});
           person.calculate_bmi();
           $("#display_value").html("Your BMI is " + person.bmiValue);

@@ -2,10 +2,10 @@
 */
 
 describe("Person", function() {
-  var person;
+  //var person;
 
   beforeEach(function() {
-    person = new Person({ weight: 85, height: 185 });
+    var person = new Person({ weight: 85, height: 185 });
   });
 
 
@@ -21,7 +21,7 @@ describe("Person", function() {
 
   it("should calculate BMI value", function() {
     person.calculate_bmi();
-    expect(person.bmiValue).toEqual(24.84);
+    expect(person.find_bmi_of).toEqual(24.84);
   });
 
 

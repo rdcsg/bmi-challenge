@@ -11,6 +11,11 @@ function Person(attr) {
 
 
 Person.prototype.calculate_bmi = function() {
+  //this.bmiValue = 51944.44;
+  //this.bmiMessage = "Obese";
+
+  //this.height = StringToInchesConverter(this.height);
+
   calculator = new BMICalculator();
   calculator.find_bmi_of(this);
 };

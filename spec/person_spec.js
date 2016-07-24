@@ -6,7 +6,7 @@ describe("Person", function() {
   //var person;   // this var is already declared in the beforeEach below
 
   beforeEach(function() {
-    person = new Person({ weight: 187, height: 6, toggle: true });
+    person = new Person({ weight: 187, height: 72/*6*/, toggle: true });
   });
 
 
@@ -15,13 +15,13 @@ describe("Person", function() {
   });
 
 
-  it("should have weight of 187", function() {
+  it("should have weight of 187 pounds", function() {
     expect(person.weight).toEqual(187);
   });
 
 
-  it("should have height of 6", function() {
-    expect(person.height).toEqual(6);
+  it("should have height of 72 inches", function() {
+    expect(person.height).toEqual(72);
   });
 
 

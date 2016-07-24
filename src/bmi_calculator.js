@@ -18,7 +18,8 @@ BMICalculator.prototype.find_bmi_of = function(obj) {
     var height_divisor = 0;
 
     if ( toggle === true ) {
-      calc_height = height * 12;
+      calc_height = height;
+      //calc_height = height * 12;  //use this when converting from foot to inches
       toggle_factor = 703;
       height_divisor = 1;
     }
@@ -28,7 +29,9 @@ BMICalculator.prototype.find_bmi_of = function(obj) {
       height_divisor = 100;
     }
     var finalBmi = weight * toggle_factor / Math.pow((calc_height/height_divisor), 2);
+    //console.log(finalBmi);
     obj.bmiValue = parseFloat(finalBmi.toFixed(2));
+    //console.log(obj.bmiValue);
     setBMIMessage(obj);
   }
 };

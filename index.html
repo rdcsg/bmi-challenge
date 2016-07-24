@@ -8,29 +8,37 @@
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
   </head>
   <body>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $("#calculate").click(function () {
-          var w = parseFloat($("#weight").val());
-          var h = parseFloat($("#height").val());
-          var t = new Boolean;
-          t = false;
-          var person = new Person({weight: w, height: h, toggle: t});
-          //var person = new Person({ weight: w, height: h });
-          person.calculate_bmi();
-          $("#display_value").html("Your BMI is " + person.bmiValue);
-          $("#display_message").html("and you are " + person.bmiMessage);
-          });
-        });
-      </script>
     <form>
-      <input type="text" id="weight" placeholder="Weight">
-      <input type="text" id="height" placeholder="Height">
+      <!--Metric<input type="radio" id="toggle_metric" value="false" name="toggle" placeholder="Metric">
+      <input type="radio" id="toggle_imperial" value="true" name="toggle" placeholder="Imperial">Imperial<br />-->
+      Metric<input type="radio" value="false" class="toggle">
+      <input type="radio" value="true" class="toggle">Imperial<br />
+      <input type="text" id="weight" placeholder="Weight in kg or pounds">
+      <input type="text" id="height" placeholder="Height in cm or inches">
       <input type="button" id="calculate" value="Calculate">
     </form>
     <div>
       <span id="display_value"></span>
       <span id="display_message"></span>
     </div>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#calculate").click(function () {
+          var w = parseFloat($("#weight").val());
+          var h = parseFloat($("#height").val());
+          if($("input[type='radio'].toggle").isNot(':checked')) {
+            alert("Please choose calculation method.");
+          } elseif($("input[type='radio'].toggle").is(':checked')) {
+            var t = $("input[type='radio'].toggle:checked").val();
+          }
+          //var t = new Boolean;
+          //t = false;
+          person = new Person({weight: w, height: h, toggle: t});
+          person.calculate_bmi();
+          $("#display_value").html("Your BMI is " + person.bmiValue);
+          $("#display_message").html("and you are " + person.bmiMessage);
+          });
+        });
+      </script>
   </body>
 </html>

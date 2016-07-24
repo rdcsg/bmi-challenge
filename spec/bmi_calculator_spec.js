@@ -5,7 +5,7 @@ describe("BMICalculator", function() {
   //var person;       //this value is declared in the beforeEach
 
   beforeEach(function() {
-    person = new Person({weight: 187, height: 6, toggle: true});
+    person = new Person({weight: 187, height: 72/*6*/, toggle: true});
     calculator = new BMICalculator();
   });
 

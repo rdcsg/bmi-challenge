@@ -5,14 +5,14 @@ describe("BMICalculator", function() {
   //var person;       //this value is declared in the beforeEach
 
   beforeEach(function() {
-    person = new Person({weight: 187, height: 72/*6*/, toggle: true});
+    person = new Person({weight: 187, height: 72/*6*/, toggle: "true"});
     calculator = new BMICalculator();
   });
 
 
   it("checks for the imperial toggle switch that the calculator sees and gets its value", function() {
     calculator.find_bmi_of(person);
-    expect(person.toggle).toEqual(true);
+    expect(person.toggle).toEqual("true");
   });
 
 
@@ -24,7 +24,7 @@ describe("BMICalculator", function() {
 
   // metric bmi only test below
   it("calculates BMI for a person using the metric method", function () {
-    person = new Person({ weight: 85, height: 185, toggle: false });
+    person = new Person({ weight: 85, height: 185, toggle: "false" });
     calculator.find_bmi_of(person);
     expect(person.bmiValue).toEqual(24.84);
   });

@@ -9,10 +9,10 @@
   </head>
   <body>
     <form>
-      <!--Metric<input type="radio" id="toggle_metric" value="false" name="toggle" placeholder="Metric">
-      <input type="radio" id="toggle_imperial" value="true" name="toggle" placeholder="Imperial">Imperial<br />-->
-      Metric<input type="radio" value="false" class="toggle">
-      <input type="radio" value="true" class="toggle">Imperial<br />
+      Metric
+      <input type="radio" value="false" class="toggle">
+      <input type="radio" value="true" class="toggle">
+      Imperial<br />
       <input type="text" id="weight" placeholder="Weight in kg or pounds">
       <input type="text" id="height" placeholder="Height in cm or inches">
       <input type="button" id="calculate" value="Calculate">
@@ -26,14 +26,12 @@
         $("#calculate").click(function () {
           var w = parseFloat($("#weight").val());
           var h = parseFloat($("#height").val());
-          if($("input[type='radio'].toggle").isNot(':checked')) {
-            alert("Please choose calculation method.");
-          } elseif($("input[type='radio'].toggle").is(':checked')) {
-            var t = $("input[type='radio'].toggle:checked").val();
-          }
+          var t = $("input[type='radio'].toggle:checked").val();
+          console.log("w: " + w + ", h: " + h + ", t: " + t );
           //var t = new Boolean;
           //t = false;
           person = new Person({weight: w, height: h, toggle: t});
+          console.log(person);
           person.calculate_bmi();
           $("#display_value").html("Your BMI is " + person.bmiValue);
           $("#display_message").html("and you are " + person.bmiMessage);

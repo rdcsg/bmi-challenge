@@ -18,13 +18,19 @@ BMICalculator.prototype.find_bmi_of = function(obj) {
     var toggle_factor = 0;
     var height_divisor = 0;
 
-    if ( toggle === "true" ) {
+    // the spec is looking for the input select val to be Boolean type
+    if(toggle === "true")
+      toggle = true;
+    else if ( toggle === "false" )
+      toggle = false;
+
+    if ( toggle === true ) {
       calc_height = height;
       //calc_height = height * 12;  //use this when converting from foot to inches
       toggle_factor = 703;
       height_divisor = 1;
     }
-    if ( toggle === "false" ) {
+    if ( toggle === false ) {
       calc_height = height;
       toggle_factor = 1;
       height_divisor = 100;

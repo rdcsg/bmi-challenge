@@ -5,9 +5,9 @@ describe('BMI_UI - index.html', function() {
         jasmine.getFixtures().fixturesPath = '.';
         loadFixtures('index.html');
         $.holdReady(false);
-        $('#weight').val(85);
-        $('#height').val('185');
         $("input[type='radio']").get(0).checked = true;
+        $('#weight').val(85);
+        $('#height').val(185);
         $('#calculate').trigger('click');
     });
 
@@ -22,9 +22,9 @@ describe('BMI_UI - index.html', function() {
 
 
     it("displays imperial BMI Value", function() {
-        $('#weight').val('187');
-        $('#height').val('72');
         $("input[type='radio']").get(1).checked = true;
+        $('#weight').val(187);
+        $('#height').val(72);
         $('#calculate').trigger('click');
         expect($('#display_value').text()).toBe('Your BMI is 25.36');
     });

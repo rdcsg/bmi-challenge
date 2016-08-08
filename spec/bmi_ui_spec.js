@@ -20,19 +20,18 @@ describe('BMI_UI - index.html', function() {
     });
 
 
-
-    it("displays imperial BMI Value", function() {
+    beforeEach(function (){
         $("input[type='radio']").get(1).checked = true;
         $('#weight').val(187);
         $('#height').val(72);
         $('#calculate').trigger('click');
-        expect($('#display_value').text()).toBe('Your BMI is 25.36');
-    });
 
-    it("displays imperial BMI Message", function() {
-        $('#weight').val('187');
-        $('#height').val('72');
-        $('#toggle').val('true');
-        expect($('#display_message').text()).toBe('and you are Overweight');
+        it("displays imperial BMI Value", function() {
+            expect($('#display_value').text()).toBe('Your BMI is 25.36');
+        });
+
+        it("displays imperial BMI Message", function() {
+            expect($('#display_message').text()).toBe('and you are Overweight');
+        });
     });
 });

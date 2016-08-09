@@ -8,9 +8,9 @@ function BMICalculator() {
 
 
 BMICalculator.prototype.find_bmi_of = function(obj) {
-  var height = person.height;
-  var weight = person.weight;
-  var toggle = person.toggle;
+  var height = obj.height;
+  var weight = obj.weight;
+  var toggle = obj.toggle;
   console.log("BMICalculator.prototype.find_bmi_of: Person obj input vals: weight: " + weight + ", height: " + height + ", toggle: " + toggle);
 
   if (weight > 0 && height > 0 ) {
